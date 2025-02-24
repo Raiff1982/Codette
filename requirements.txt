@@ -1,0 +1,9 @@
+aiohttp>=3.7.4
+botbuilder-core>=4.14.0
+botbuilder-schema>=4.14.0
+botbuilder-integration-aiohttp>=4.14.0
+transformers>=4.0.0
+torch>=1.7.0
+numpy>=1.19.2
+scikit-learn>=0.24.1
+tk

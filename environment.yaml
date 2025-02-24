@@ -1,16 +1,14 @@
-# Conda environment configuration for the base environment
-# This environment is configured with essential data science libraries.
-
 name: base
 channels:
   - defaults
-  - conda-forge  # Add conda-forge channel for more up-to-date packages
+  - conda-forge
 dependencies:
-  - python>=3.10, <3.11  # Use a version range for Python
-  - numpy  # Fundamental package for scientific computing with Python
-  - pandas  # Data manipulation and analysis library
-  - scikit-learn  # Machine learning library
-  - matplotlib  # Plotting library
-
-# Run `conda env create -f environment.yml` to create this environment.
-# Run `conda activate base` to activate this environment.
+  - python=3.10
+  - flake8
+  - pytest
+  - aiohttp
+  - transformers
+  - pyyaml
+  - json
+  - pip:
+    - some-pip-package
