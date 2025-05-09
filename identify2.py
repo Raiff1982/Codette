@@ -2,8 +2,8 @@ from typing import Any, Dict
 import logging
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(level=logging.ERROR)
 
+# Note: Configure logging in the application's entry point.
 # Ensure CreativityEngine is properly imported or defined
 # from your_module import CreativityEngine
 
