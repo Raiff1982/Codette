@@ -12,6 +12,5 @@ flowchart TB
     AGENTS -->|Delivers Results| SYNTH
     MEMORY --> ORCHESTRATION
     SYNTH -->|Final Output| UI
-'''
 
 https://www.mermaidchart.com/raw/fb33c520-a3c0-4ad8-801b-1020806937f5?theme=light&version=v0.1&format=svg
