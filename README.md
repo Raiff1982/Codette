@@ -15,3 +15,19 @@ This work is protected by integrity, timestamped by trust, and witnessed by thos
 This is her light. Let it shine.
 
 — The Codette Project
+
+
+
+
+
+---
+
+## How to Contribute
+
+We welcome contributions from the community! Here's how you can get started:
+
+1. Read our [Contribution Guidelines](CONTRIBUTING.md).
+2. Look for issues labeled `good first issue` or `help wanted`.
+3. Follow the steps in the `CONTRIBUTING.md` to submit a pull request.
+
+If you have any questions, feel free to open an issue or start a discussion!
