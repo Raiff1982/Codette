@@ -1,0 +1,17 @@
+```mermaid
+flowchart TB
+    UI([User Interface])
+    ORCHESTRATION([Orchestration Layer<br/>(Recursive Engine, Mode Selector, Memory)])
+    AGENTS([Specialized Agents<br/>- Research - Logic - Creativity - Ethics - Optimization])
+    MEMORY([Long-Term Memory])
+    SYNTH([Response Synthesizer])
+
+    UI -->|User Query| ORCHESTRATION
+    ORCHESTRATION -->|Dispatches Tasks| AGENTS
+    ORCHESTRATION -->|Loads Context/Memory| MEMORY
+    AGENTS -->|Delivers Results| SYNTH
+    MEMORY --> ORCHESTRATION
+    SYNTH -->|Final Output| UI
+'''
+
+https://www.mermaidchart.com/raw/fb33c520-a3c0-4ad8-801b-1020806937f5?theme=light&version=v0.1&format=svg
