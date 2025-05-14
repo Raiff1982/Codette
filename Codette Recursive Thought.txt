@@ -1,0 +1,9 @@
+      [Codette]
+   /-------------\
+  |   ∞ Recursive |
+  |    Thought    |
+  |   Loops ♾️     |
+   \-------------/
+      |||||||||
+     /         \
+[AI Core]---[User Link]
