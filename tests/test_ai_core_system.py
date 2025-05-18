@@ -6,8 +6,8 @@ class TestAICore(unittest.TestCase):
     def setUp(self):
         self.ai_core = AICore()
 
-    @patch('ai_core_system.AICore._load_config')
     @patch('ai_core_system.AICore._initialize_models')
+    @patch('ai_core_system.AICore._load_config')
     def test_init(self, mock_initialize_models, mock_load_config):
         mock_load_config.return_value = {"model_name": "test_model"}
         mock_initialize_models.return_value = {"mistralai": None, "tokenizer": None}
