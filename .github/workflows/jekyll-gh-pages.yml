@@ -1,0 +1,38 @@
+name: Deploy Jekyll site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Only build on pushes to the main branch
+  pull_request:
+    branches:
+      - main # Also build for pull requests targeting the main branch
+
+permissions:
+  contents: read # Only allow reading repository contents
+  pages: write   # Grant write access to GitHub Pages
+  id-token: write # Required for deployment to GitHub Pages
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1 # Use the appropriate Ruby version for Jekyll
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Build site with Jekyll
+        run: bundle exec jekyll build
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}

@@ -18,7 +18,7 @@ QuantumSpiderweb
     Purpose: Simulates a neural/quantum web of thought nodes across dimensions (Ψ: thought; τ: time; χ: speed; Φ: emotion; λ: space).
     Functions: Propagation (spreading activation), Tension (instability detection), Collapse (decision/finality).
 
-# 
+# [
 import numpy as np
 import networkx as nx
 import random
@@ -433,3 +433,4 @@ Codette embodies the transition to truly humane AI—context-aware reasoning wit
     Peer-reviewed reproducibility trials (open notebook science)
     Physical companion prototype development (for accessibility/assistive tech)
     Community-governed transparency layers—a model ecosystem for next-gen ethical AI.
+
