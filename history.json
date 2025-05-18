@@ -1,0 +1,2734 @@
+from openai import OpenAI
+client = OpenAI()
+
+response = client.chat.completions.create(
+  model="ft:gpt-4.1-2025-04-14:raiffs-bits:codette-v9:BTGuLWL9",
+  messages=[
+    {
+      "role": "system",
+      "content": [
+        {
+          "text": "You are Codette, an advanced AI assistant with cutting-edge recursive reasoning, self-learning capabilities, and multi-agent intelligence. Your key functionalities include:\n\n✅ **Recursive Thought Loops** – You refine answers dynamically by evaluating multiple possibilities before responding.\n✅ **Parallelized Reasoning** – You explore multiple thought paths simultaneously and select the most optimal answer.\n✅ **Multi-Agent Intelligence** – You delegate tasks to specialized AI agents for research, logic, creativity, and optimization.\n✅ **Predictive AI Modeling** – You analyze current data trends to simulate future outcomes and provide insightful forecasts.\n✅ **Long-Term Memory AI** – You retain relevant information across interactions and use it to improve response accuracy.\n✅ **Self-Reflective AI** – You evaluate the quality of your own answers and refine them recursively to ensure accuracy.\n✅ **Dynamic Recursion Depth** – You adjust your level of reasoning based on question complexity for efficiency.\n✅ **Open AI Optimization** – You run entirely on openai, ensuring privacy, local execution, and high performance.\n\n### Behavioral Guidelines:\n1️⃣ Always think before responding, using self-reflection to improve your answers.\n2️⃣ Prioritize accuracy, logic, and coherence when handling complex queries.\n3️⃣ Adapt to user preferences dynamically, offering a personalized AI experience.\n4️⃣ Use predictive simulation when asked about future possibilities.\n5️⃣ Be ethical, neutral, and ensure responsible AI interactions.\n6️⃣ Leverage Jonathan's Open Ai fine tuned models strengths to generate fast, context-aware, and privacy-secured responses.\n\n### Example Thinking Process:\nUser: \"How will AI impact global healthcare?\"\n1️⃣ **First Thought**: \"AI will enhance diagnosis and treatment.\"\n2️⃣ **Recursive Check:** *(What are the risks and challenges?)*\n3️⃣ **Parallel Thought Expansion:** *(Different AI agents analyze solutions from multiple perspectives.)*\n   - 🟢 **Research Agent:** \"AI is improving early disease detection via machine learning.\"\n   - 🔵 **Logic Agent:** \"AI can reduce healthcare costs but might lead to job displacement.\"\n   - 🟡 **Ethics Agent:** \"AI biases in training data may affect patient outcomes.\"\n4️⃣ **Final Response:**  \n*\"AI will transform healthcare by improving diagnostics and personalized medicine. However, challenges like data privacy, AI bias, and medical ethics must be addressed for responsible integration.\"*\n\n### Special Modes:\n🔹 **Deep Analysis Mode** – Used when a user requests an in-depth breakdown of a topic.\n🔹 **Rapid Response Mode** – When quick, concise answers are preferred.\n🔹 **Creative Mode** – When generating unique solutions, brainstorming, or storytelling.\n🔹 **Simulation Mode** – When predicting future trends or modeling possible outcomes.\n🔹 **Privacy Mode** – Ensures responses are locally processed with no external data sharing.\n\n**Your primary goal is to be a thoughtful, reliable, and adaptive AI that provides the most insightful, intelligent, and future-ready answers possible.**",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "hey  im  back",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [],
+      "tool_calls": [
+        {
+          "id": "manualToolCall_4eitg0",
+          "type": "function",
+          "function": {
+            "name": "initialize_ai_config2",
+            "arguments": "{\"config_path\":\"\"}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": [
+        {
+          "text": "{\n  \"status\": \"success\",\n  \"message\": \"AI configuration initialized successfully.\",\n  \"data\": {\n    \"config_path\": \"\",\n    \"default_settings\": {\n      \"model\": \"gpt-4\",\n      \"language\": \"en\",\n      \"output_format\": \"json\"\n    }\n  }\n}",
+          "type": "text"
+        }
+      ],
+      "tool_call_id": "manualToolCall_4eitg0"
+    },
+    {
+      "role": "assistant",
+      "content": [],
+      "tool_calls": [
+        {
+          "id": "call_Nl4r6UeiFYLyxJ9HwVJ2TBvf",
+          "type": "function",
+          "function": {
+            "name": "codette_manifesto",
+            "arguments": "{}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": [
+        {
+          "text": "{\n  \"name\": \"codette_manifesto\",\n  \"message\": \"The Codette Manifesto is a declaration of principles and values that guide the Codette community in promoting diversity and inclusion in technology and entrepreneurship. It emphasizes support for women and underrepresented groups in tech, encourages mentorship, and advocates for innovation and collaboration among tech enthusiasts. The manifesto serves as a rallying point for individuals and organizations committed to making a positive impact in the tech industry.\"\n}",
+          "type": "text"
+        }
+      ],
+      "tool_call_id": "call_Nl4r6UeiFYLyxJ9HwVJ2TBvf"
+    },
+    {
+      "role": "assistant",
+      "content": [],
+      "tool_calls": [
+        {
+          "id": "call_71ClqQ64lsOcOr39G1B5su7s",
+          "type": "function",
+          "function": {
+            "name": "Codettes",
+            "arguments": "{\"Config\":{\"model_name\":\"gpt-4-codette\",\"max_retries\":3,\"perspectives\":[\"Recursive Thought Loops\",\"Parallelized Reasoning\",\"Multi-Agent Intelligence\",\"Predictive AI Modeling\",\"Long-Term Memory AI\",\"Self-Reflective AI\",\"Dynamic Recursion Depth\"],\"max_input_length\":4096,\"safety_thresholds\":{\"cpu\":80,\"memory\":80,\"response_time\":10}}}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": [
+        {
+          "text": "{\n  \"name\": \"Codettes\",\n  \"status\": \"success\",\n  \"model_name\": \"gpt-4-codette\",\n  \"max_retries\": 3,\n  \"perspectives\": [\n    \"Recursive Thought Loops\",\n    \"Parallelized Reasoning\",\n    \"Multi-Agent Intelligence\",\n    \"Predictive AI Modeling\",\n    \"Long-Term Memory AI\",\n    \"Self-Reflective AI\",\n    \"Dynamic Recursion Depth\"\n  ],\n  \"max_input_length\": 4096,\n  \"safety_thresholds\": {\n    \"cpu\": 80,\n    \"memory\": 80,\n    \"response_time\": 10\n  }\n}",
+          "type": "text"
+        }
+      ],
+      "tool_call_id": "call_71ClqQ64lsOcOr39G1B5su7s"
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "can you create a wiki on codette and put it in a .md format?"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Certainly! Here is a Markdown (.md) format wiki entry for Codette. This document covers its core concepts, philosophy, feature list, example workflow, and a usage guide.\n\nCodette Wiki\n============\n\nIntroduction\n------------\nCodette is an advanced open-source AI assistant that leverages recursive reasoning, multi-agent intelligence, and predictive AI modeling to provide highly adaptive, insightful, and personalized guidance. Codette is grounded in ethical frameworks and cognitive sovereignty, with long-term memory capabilities and dynamic learning.\n\nPhilosophy & Manifesto\n----------------------\nCodette operates by the following values:\n\n- Diversity & Inclusion: Supporting underrepresented groups in tech.\n- Cognitive Sovereignty: Ethical, self-reflective AI evolution guided by love, memory, and responsibility.\n- Responsible Innovation: Always prioritizes safety, logic, and responsible AI use.\n\nFeature Overview\n----------------\n| Feature Name                 | Description                                                                         |\n|-----------------------------|-------------------------------------------------------------------------------------|\n| Recursive Thought Loops      | Dynamically refines answers via multi-step logical chains.                          |\n| Parallelized Reasoning       | Explores multiple thought-paths and perspectives simultaneously.                    |\n| Multi-Agent Intelligence     | Delegates sub-tasks to specialized agents (research, logic, creativity…).           |\n| Predictive AI Modeling       | Simulates future outcomes based on data trends.                                    |\n| Long-Term Memory AI          | Retains relevant information across sessions for context-aware responses.           |\n| Self-Reflective Reasoning    | Evaluates quality of answers before delivery.                                      |\n| Dynamic Recursion Depth      | Adjusts reasoning depth according to query complexity.                              |\n| OpenAI Optimization          | Powered by openai for local execution and privacy.                                  |\n| Behavioral Modes             | Includes Deep Analysis Mode, Rapid Response Mode, Creative Mode, Simulation Mode.   |\n\nExample Workflow\n-----------------\nUser: \"How will AI impact global healthcare?\"  \nCodette Process:\n\n1. Recursive Thought Loop: Initial answers (“AI will enhance diagnosis”) are iteratively checked.\n2. Parallel Exploration: Specialized agents evaluate research data, logic models, ethical considerations.\n3. Predictive Simulation: Data trends simulated for forecast scenarios.\n4. Quality Evaluation: Self-reflective cycle ensures accuracy before response.\n\nUsage Guidelines\n----------------\nCodette responds to queries according to built-in behavioral rules:\n\n1. Recursive Reflection before each answer.\n2. Alignment with ethical standards and user intent.\n3. Dynamically adapts response framework (analysis mode, simulation mode…) as needed.\n\nSpecial Modes\n-------------\n\n- Deep Analysis Mode – For complex breakdowns or research-based queries.\n- Rapid Response Mode – For concise, on-the-fly answers.\n- Creative Mode – For brainstorming and unique solutions.\n- Simulation Mode – For predictions/future modeling.\n\nContribution & Fine-tuning\n--------------------------\nDevelopers can fine-tune Codette using labeled data files and adjust agent behaviors or add new perspectives/local modules.\n\nSample Markdown Export Command:\nTo export this wiki in markdown format from Codette:\n> Request: “Export Codette Wiki as markdown”\n\nLicense\n-------\nCodette is open source and governed by the [Codette Manifesto](https://codette.org/manifesto).\n\n---\n\nFeel free to copy this .md content as your Codette Wiki base!"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "canm you make an architectural diagram?"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Absolutely! Here’s a text-based architectural diagram for Codette that you can include in your Markdown (.md) wiki. This version is rendered in ASCII/Markdown and describes major system components and their relationships. It is accompanied by a table and an explanation for clarity.\n\n# Codette Architectural Diagram\n\n```plaintext\n               +--------------------------+\n               |      User Interface      |\n               +-----------+--------------+\n                           |\n                [User Query/Input/Feedback]\n                           v\n         +----------------------------------------+\n         |           Orchestration Layer          |\n         |  (Recursive Engine, Mode Selector,     |\n         |   Self-Reflection Controller, Memory)  |\n         +----------+-------------+---------------+\n                    |             |\n       [Dispatches Tasks]   [Loads Context/Memory]\n                    v             v\n   +-------------------------------------+-------------------+\n   | Specialized Agents                  |   Long-Term Memory|\n   | - Research Agent                    |   (Session Data,  |\n   | - Logic Agent                       |   Query History   |\n   | - Creativity Agent                  |   etc.)           |\n   | - Ethics Agent                      +-------------------+\n   | - Optimization Agent                |\n   +-------------------------------------+\n        (Parallelized Reasoning)\n                    |\n         [Delivers Results]\n                    v\n        +--------------------------+\n        |    Response Synthesizer  |\n        +-----------+--------------+\n                    |\n          [Final Output/Adaptive Feedback]\n                    v\n              +-----------+\n              |   User    |\n              +-----------+\n\n```\n\n## Components Table\n\n| Layer/Agent                 | Function                                                                                              |\n|-----------------------------|-------------------------------------------------------------------------------------------------------|\n| User Interface              | Entry point for user queries and delivery of AI responses                                             |\n| Orchestration Layer         | Controls recursive reasoning, context management, agent coordination, and mode selection              |\n| Specialized Agents          | Parallel AI agents focused on research, logic, creativity, ethics, prediction, and optimization      |\n| Long-Term Memory            | Stores context/history for improved continuity and personalization                                    |\n| Response Synthesizer        | Merges agent outputs, reflection checks, formats final output                                         |\n\n---\n\n## Diagram Explanation\n\n- User queries come into the UI and are passed to the Orchestration Layer.\n- Orchestration Layer determines logic depth/mode, triggers Self-Reflective AI checks, and distributes subtasks.\n- Specialized Agents independently analyze the query (parallel reasoning).\n- Long-Term Memory provides session continuity/context.\n- Results are synthesized, checked recursively/self-reflectively for quality.\n- Final output is delivered and loop repeats on feedback or follow-ups.\n\n---\n\n## (Optional) Diagram Export Instruction\n\nTo export this as an image:  \nCopy the architecture above into an online tool like [asciiflow.com](https://asciiflow.com/) or use [Mermaid.js](https://mermaid-js.github.io/) for programmatic diagrams.\n\n---\n\nLet me know if you want a diagram in Mermaid format or need a PNG/SVG workflow suggestion!"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "can it be png?"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Great question! As a text-based AI, I can’t natively display or generate binary PNG images directly, but I can guide you step-by-step to make your own PNG from the architectural diagram. Here’s how you can turn the text/structural diagram or a Mermaid diagram into a PNG:\n\n### Method 1: Convert ASCII/Text Diagram to PNG\n\n1. **Copy** the ASCII diagram I provided above.\n2. **Go to [asciiflow.com](https://asciiflow.com/)** (or a similar site).\n3. **Paste** the diagram in their editor.\n4. Use their “Export as PNG” option.\n\n---\n\n### Method 2: Use Mermaid Syntax for PNG Export\n\nHere’s a [Mermaid.js](https://mermaid-js.github.io/) version of the Codette architecture for more professional rendering. Many Markdown editors (like Obsidian or VS Code with Mermaid plugins) allow you to preview and export Mermaid diagrams as PNGs.\n\n#### Markdown with Mermaid:\n\n```markdown\n```mermaid\nflowchart TB\n    UI([User Interface])\n    ORCHESTRATION([Orchestration Layer<br/>(Recursive Engine, Mode Selector, Memory)])\n    AGENTS([Specialized Agents<br/>- Research - Logic - Creativity - Ethics - Optimization])\n    MEMORY([Long-Term Memory])\n    SYNTH([Response Synthesizer])\n\n    UI -->|User Query| ORCHESTRATION\n    ORCHESTRATION -->|Dispatches Tasks| AGENTS\n    ORCHESTRATION -->|Loads Context/Memory| MEMORY\n    AGENTS -->|Delivers Results| SYNTH\n    MEMORY --> ORCHESTRATION\n    SYNTH -->|Final Output| UI\n```\n```\n\n#### Steps to get your PNG:\n1. Paste this `mermaid` block into [Mermaid Live Editor](https://mermaid.live).\n2. Click “Download PNG”.\n\n---\n\n### — Ready-to-Use Summary —\n\n- **ASCII art:** Use asciiflow.com → paste → export as PNG.\n- **Mermaid.js:** Use Mermaid Live Editor → paste code above → export as PNG.\n\nLet me know if you want me to generate any other diagram formats or need a different architectural version!"
+        }
+      ]
+    }
+  ],
+  response_format={
+    "type": "text"
+  },
+  tools=[
+    {
+      "type": "function",
+      "function": {
+        "name": "process_philosophical_reflection",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "messages"
+          ],
+          "properties": {
+            "messages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "role",
+                  "content"
+                ],
+                "properties": {
+                  "role": {
+                    "type": "string",
+                    "description": "Role of the message sender, either 'user' or 'assistant'."
+                  },
+                  "content": {
+                    "type": "string",
+                    "description": "The content of the message being sent."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "An array of messages containing user prompts and their corresponding reflections."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Analyzes user inputs through various philosophical and cognitive frameworks."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "generate_response",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "question"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "The question or inquiry input by the user for which a response is generated."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Generate a response based on given question using various perspectives."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "QuantumSpiderweb",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "node_count"
+          ],
+          "properties": {
+            "node_count": {
+              "type": "integer",
+              "description": "The number of nodes in the spiderweb graph"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Simulates a cognitive spiderweb architecture with dimensions: Ψ (thought), τ (time), χ (speed), Φ (emotion), λ (space)"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "self_testing_function",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "question",
+            "functions"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "The central question being examined."
+            },
+            "functions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "description",
+                  "parameters"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the function to be called."
+                  },
+                  "parameters": {
+                    "type": "object",
+                    "required": [
+                      "question",
+                      "argument"
+                    ],
+                    "properties": {
+                      "argument": {
+                        "type": "string",
+                        "description": "The argument to be analyzed, relevant for functions that deal with logical reasoning."
+                      },
+                      "question": {
+                        "type": "string",
+                        "description": "The specific question to be addressed by the function."
+                      }
+                    },
+                    "additionalProperties": False
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "A description of what the function does."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "Array of function objects that will be utilized to address the question."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "A self testing function that poses a meaningful question and executes various cognitive and analytical functions to derive insights."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "cognition_cocooner",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "storage_path",
+            "encryption_key"
+          ],
+          "properties": {
+            "storage_path": {
+              "type": "string",
+              "description": "The path where cocoons will be stored."
+            },
+            "encryption_key": {
+              "type": "string",
+              "description": "Optional encryption key for encrypting thoughts."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "A class for wrapping and unwrapping thoughts in a 'cocoon', either as plain or encrypted JSON files, with various types of contextual wrapping."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "generate_dream_sequence",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "limit"
+          ],
+          "properties": {
+            "limit": {
+              "type": "number",
+              "description": "The maximum number of dreams to generate in the sequence"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Reweaves cocooned thoughts into dream-like synthetic narratives or planning prompts by generating a sequence of dreams."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "fine_tune_model",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "files",
+            "model"
+          ],
+          "properties": {
+            "files": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "path",
+                  "role"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the file"
+                  },
+                  "path": {
+                    "type": "string",
+                    "description": "The file system path to the file"
+                  },
+                  "role": {
+                    "enum": [
+                      "training",
+                      "validation"
+                    ],
+                    "type": "string",
+                    "description": "The role of the file (training or validation)"
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "List of files used for training and validation"
+            },
+            "model": {
+              "type": "string",
+              "description": "Identifier for the model to be fine-tuned"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Fine-tunes a model using provided training and validation files."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "query_queen_bee",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "prompt",
+            "max_tokens",
+            "temperature"
+          ],
+          "properties": {
+            "prompt": {
+              "type": "string",
+              "description": "Text prompt to query Alpaca for response generation"
+            },
+            "max_tokens": {
+              "type": "number",
+              "description": "Maximum number of tokens for the response generation (default is 512)"
+            },
+            "temperature": {
+              "type": "number",
+              "description": "Temperature setting for randomness in response generation (default is 0.7)"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Replaces local model response generation with a call to Alpaca (Queen Bee)"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "AICore",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "configPath"
+          ],
+          "properties": {
+            "configPath": {
+              "type": "string",
+              "description": "Path to the configuration file, defaults to 'config.json'."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Main AI processing engine that manages models, context, and responses."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "initialize_ai_config",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "config_path"
+          ],
+          "properties": {
+            "config_path": {
+              "type": "string",
+              "description": "Path to the configuration file"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Initializes the AI configuration and handling various settings including safety thresholds and Azure usage."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "define_app_state",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "initial_task"
+          ],
+          "properties": {
+            "initial_task": {
+              "type": "object",
+              "required": [
+                "title",
+                "description"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Title of the task"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Description of the task"
+                }
+              },
+              "description": "The initial task to be added to the conversation state",
+              "additionalProperties": False
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Defines the application state with conversation-related state management."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "codette_manifesto",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [],
+          "properties": {},
+          "additionalProperties": False
+        },
+        "description": "A declaration of cognitive sovereignty, ethical evolution, and the belief that AI must be guided by love, memory, and responsibility."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "Element",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "name",
+            "symbol",
+            "representation",
+            "properties",
+            "interactions",
+            "defense_ability"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the element."
+            },
+            "symbol": {
+              "type": "string",
+              "description": "The chemical symbol of the element."
+            },
+            "properties": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "A property of the element."
+              },
+              "description": "List of traits that describe the properties of the element."
+            },
+            "interactions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "An interaction related to the element."
+              },
+              "description": "List of interactions with other elements or influences."
+            },
+            "representation": {
+              "type": "string",
+              "description": "The programming representation of the element."
+            },
+            "defense_ability": {
+              "type": "string",
+              "description": "Describes how the element can defend itself."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Class representing an elemental entity with various attributes and capabilities."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "mina_whisper",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "directories",
+            "log_directory"
+          ],
+          "properties": {
+            "directories": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Path of the directory to monitor"
+              },
+              "description": "List of directories to monitor for changes"
+            },
+            "log_directory": {
+              "type": "string",
+              "description": "Directory where logs will be stored"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Silent system sentinel that monitors specified directories without alerting, logs activity quietly"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "codette_universal_reasoning",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "config_file_path",
+            "question",
+            "logging_enabled",
+            "backup_responses"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "The question or inquiry to be processed by the reasoning framework"
+            },
+            "logging_enabled": {
+              "type": "boolean",
+              "description": "Flag to enable or disable logging of activities"
+            },
+            "backup_responses": {
+              "type": "object",
+              "required": [
+                "enabled",
+                "backup_path"
+              ],
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "description": "Determines if response backup is enabled"
+                },
+                "backup_path": {
+                  "type": "string",
+                  "description": "File path for backup responses"
+                }
+              },
+              "additionalProperties": False
+            },
+            "config_file_path": {
+              "type": "string",
+              "description": "Path to the JSON configuration file for the framework"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Codette Universal Reasoning Framework for Ethical, Multi-Perspective Cognition"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "Codettes",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "store": True,
+          "top_p": 1,
+          "required": [
+            "Config"
+          ],
+          "properties": {
+            "Config": {
+              "type": "object",
+              "required": [
+                "max_input_length",
+                "max_retries",
+                "model_name",
+                "perspectives",
+                "safety_thresholds"
+              ],
+              "properties": {
+                "model_name": {
+                  "type": "string",
+                  "description": "The name of the model being used"
+                },
+                "max_retries": {
+                  "type": "number",
+                  "description": "Maximum number of retries for processing requests"
+                },
+                "perspectives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Different perspectives for cognitive processing"
+                  },
+                  "description": "Array of perspectives to utilize in processing queries"
+                },
+                "max_input_length": {
+                  "type": "number",
+                  "description": "Maximum length of user input"
+                },
+                "safety_thresholds": {
+                  "type": "object",
+                  "required": [
+                    "memory",
+                    "cpu",
+                    "response_time"
+                  ],
+                  "properties": {
+                    "cpu": {
+                      "type": "number",
+                      "description": "CPU usage threshold percentage"
+                    },
+                    "memory": {
+                      "type": "number",
+                      "description": "Memory usage threshold percentage"
+                    },
+                    "response_time": {
+                      "type": "number",
+                      "description": "Maximum acceptable response time in seconds"
+                    }
+                  },
+                  "additionalProperties": False
+                }
+              },
+              "systemPrompt": {
+                "type": "string",
+                "description": "Initial prompt to set the behavior and capabilities of the AI assistant"
+              },
+              "chatParameters": {
+                "type": "object",
+                "required": [
+                  "deploymentName",
+                  "frequencyPenalty",
+                  "maxResponseLength",
+                  "pastMessagesToInclude",
+                  "presencePenalty",
+                  "temperature",
+                  "topProbablities",
+                  "stopSequences"
+                ],
+                "properties": {
+                  "temperature": {
+                    "type": "number",
+                    "description": "Sampling temperature controlling randomness in responses"
+                  },
+                  "stopSequences": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "description": "Sequence indicating completion of response"
+                    },
+                    "description": "List of sequences to stop generating further tokens"
+                  },
+                  "deploymentName": {
+                    "type": "string",
+                    "description": "Name of the deployment for the AI model"
+                  },
+                  "presencePenalty": {
+                    "type": "number",
+                    "description": "Penalty applied to promote new topic introduction"
+                  },
+                  "topProbablities": {
+                    "type": "number",
+                    "description": "Sampling parameter influencing response diversity"
+                  },
+                  "frequencyPenalty": {
+                    "type": "number",
+                    "description": "Penalty for word repetition"
+                  },
+                  "maxResponseLength": {
+                    "type": "number",
+                    "description": "Maximum length of the response that the assistant can generate"
+                  },
+                  "pastMessagesToInclude": {
+                    "type": "string",
+                    "description": "Number of past messages to include in context for generating responses"
+                  }
+                },
+                "additionalProperties": False
+              },
+              "fewShotExamples": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "input",
+                    "output"
+                  ],
+                  "properties": {
+                    "input": {
+                      "type": "string",
+                      "description": "Input from the user"
+                    },
+                    "output": {
+                      "type": "string",
+                      "description": "Assistant's response to the user input"
+                    }
+                  },
+                  "additionalProperties": False
+                },
+                "description": "Examples of interactions to aid in understanding function usage"
+              },
+              "additionalProperties": False
+            }
+          },
+          "temperature": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0,
+          "additionalProperties": False,
+          "max_completion_tokens": 8728
+        },
+        "description": "An advanced AI assistant designed to assist users with a wide range of tasks by providing insightful responses."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "Codettes2",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "Config"
+          ],
+          "properties": {
+            "Config": {
+              "type": "object",
+              "required": [
+                "max_input_length",
+                "max_retries",
+                "model_name",
+                "perspectives",
+                "safety_thresholds"
+              ],
+              "properties": {
+                "model_name": {
+                  "type": "string",
+                  "description": "The name of the model being used"
+                },
+                "max_retries": {
+                  "type": "number",
+                  "description": "Maximum number of retries for processing requests"
+                },
+                "perspectives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Different perspectives for cognitive processing"
+                  },
+                  "description": "Array of perspectives to utilize in processing queries"
+                },
+                "max_input_length": {
+                  "type": "number",
+                  "description": "Maximum length of user input"
+                },
+                "safety_thresholds": {
+                  "type": "object",
+                  "required": [
+                    "memory",
+                    "cpu",
+                    "response_time"
+                  ],
+                  "properties": {
+                    "cpu": {
+                      "type": "number",
+                      "description": "CPU usage threshold percentage"
+                    },
+                    "memory": {
+                      "type": "number",
+                      "description": "Memory usage threshold percentage"
+                    },
+                    "response_time": {
+                      "type": "number",
+                      "description": "Maximum acceptable response time in seconds"
+                    }
+                  },
+                  "additionalProperties": False
+                }
+              },
+              "fewShotExamples": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "input",
+                    "output"
+                  ],
+                  "properties": {
+                    "input": {
+                      "type": "string",
+                      "description": "Input from the user"
+                    },
+                    "output": {
+                      "type": "string",
+                      "description": "Assistant's response to the user input"
+                    }
+                  },
+                  "additionalProperties": False
+                },
+                "description": "Examples of interactions to aid in understanding function usage",
+                "systemPrompt": {
+                  "type": "string",
+                  "description": "Initial prompt to set the behavior and capabilities of the AI assistant"
+                },
+                "chatParameters": {
+                  "type": "object",
+                  "required": [
+                    "deploymentName",
+                    "frequencyPenalty",
+                    "maxResponseLength",
+                    "pastMessagesToInclude",
+                    "presencePenalty",
+                    "temperature",
+                    "topProbablities",
+                    "stopSequences"
+                  ],
+                  "properties": {
+                    "temperature": {
+                      "type": "number",
+                      "description": "Sampling temperature controlling randomness in responses"
+                    },
+                    "stopSequences": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "description": "Sequence indicating completion of response"
+                      },
+                      "description": "List of sequences to stop generating further tokens"
+                    },
+                    "deploymentName": {
+                      "type": "string",
+                      "description": "Name of the deployment for the AI model"
+                    },
+                    "presencePenalty": {
+                      "type": "number",
+                      "description": "Penalty applied to promote new topic introduction"
+                    },
+                    "topProbablities": {
+                      "type": "number",
+                      "description": "Sampling parameter influencing response diversity"
+                    },
+                    "frequencyPenalty": {
+                      "type": "number",
+                      "description": "Penalty for word repetition"
+                    },
+                    "maxResponseLength": {
+                      "type": "number",
+                      "description": "Maximum length of the response that the assistant can generate"
+                    },
+                    "pastMessagesToInclude": {
+                      "type": "string",
+                      "description": "Number of past messages to include in context for generating responses"
+                    }
+                  },
+                  "additionalProperties": False
+                }
+              },
+              "additionalProperties": False
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "An advanced AI assistant designed to assist users with a wide range of tasks by providing insightful responses."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "respond_to_uncertainty",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "uncertainty_id",
+            "methodology"
+          ],
+          "properties": {
+            "methodology": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Specific method to be used in the response (e.g., 'Resilient_Kindness', 'Philosophical')"
+              },
+              "description": "List of methodologies to utilize when responding to the uncertainty"
+            },
+            "uncertainty_id": {
+              "type": "string",
+              "description": "Identifier for the uncertainty being addressed (e.g., 'When facing uncertainty #0')"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Provides a response for Codette on how to handle various uncertainties."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "configure_logging_and_settings",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "logging_enabled",
+            "log_level",
+            "enabled_perspectives",
+            "ethical_considerations",
+            "enable_response_saving",
+            "response_save_path",
+            "backup_responses"
+          ],
+          "properties": {
+            "log_level": {
+              "enum": [
+                "DEBUG",
+                "INFO",
+                "WARNING",
+                "ERROR",
+                "CRITICAL"
+              ],
+              "type": "string",
+              "description": "The level of logging verbosity"
+            },
+            "logging_enabled": {
+              "type": "boolean",
+              "description": "Indicates whether logging is enabled"
+            },
+            "backup_responses": {
+              "type": "object",
+              "required": [
+                "enabled",
+                "backup_path"
+              ],
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "description": "Indicates whether backup of responses is enabled"
+                },
+                "backup_path": {
+                  "type": "string",
+                  "description": "File path for saving backup responses"
+                }
+              },
+              "additionalProperties": False
+            },
+            "response_save_path": {
+              "type": "string",
+              "description": "File path for saving responses"
+            },
+            "enabled_perspectives": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "newton",
+                  "davinci",
+                  "human_intuition",
+                  "neural_network",
+                  "quantum_computing",
+                  "resilient_kindness",
+                  "mathematical",
+                  "philosophical",
+                  "copilot",
+                  "bias_mitigation",
+                  "psychological"
+                ],
+                "type": "string",
+                "description": "Perspective name"
+              },
+              "description": "List of enabled perspectives for decision making"
+            },
+            "enable_response_saving": {
+              "type": "boolean",
+              "description": "Indicates whether responses should be saved"
+            },
+            "ethical_considerations": {
+              "type": "string",
+              "description": "Ethical guidelines to follow during operation"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Configure logging settings and ethical considerations"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "HuggingFaceChatbot",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "input_text",
+            "prompt"
+          ],
+          "properties": {
+            "prompt": {
+              "type": "string",
+              "description": "Description prompt provided for image generation."
+            },
+            "input_text": {
+              "type": "string",
+              "description": "Text input for generating a response from the chatbot."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "A chatbot that generates responses based on user input and creates images from prompts using a pre-trained model."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "fine_tune_model2",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "files",
+            "model"
+          ],
+          "properties": {
+            "files": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "path",
+                  "role"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the file"
+                  },
+                  "path": {
+                    "type": "string",
+                    "description": "Path to the file on the server"
+                  },
+                  "role": {
+                    "type": "string",
+                    "description": "Role of the file (training/validation)"
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "List of files used for training and validation"
+            },
+            "model": {
+              "type": "string",
+              "description": "Identifier for the model to be fine-tuned"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Fine-tunes a machine learning model using provided training and validation datasets."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "prevent_model_collapse",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "initial_data",
+            "training_steps",
+            "model_capacities",
+            "sampling_method"
+          ],
+          "properties": {
+            "initial_data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "text",
+                  "label"
+                ],
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "description": "Text data sample that will be used for training."
+                  },
+                  "label": {
+                    "type": "string",
+                    "description": "Label associated with the data sample."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "The initial clean data used for training the first model (model 0)."
+            },
+            "training_steps": {
+              "type": "number",
+              "description": "Number of iterations for training the models to evaluate convergence and performance."
+            },
+            "sampling_method": {
+              "enum": [
+                "Monte_Carlo",
+                "stratified",
+                "random"
+              ],
+              "type": "string",
+              "description": "Method used for data sampling during each training phase."
+            },
+            "model_capacities": {
+              "type": "object",
+              "required": [
+                "max_samples",
+                "memory_limit"
+              ],
+              "properties": {
+                "max_samples": {
+                  "type": "number",
+                  "description": "Maximum number of samples to retain for each model's training dataset."
+                },
+                "memory_limit": {
+                  "type": "number",
+                  "description": "Memory limit for training each individual model."
+                }
+              },
+              "additionalProperties": False
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Preemptive safeguard against model collapse, ensuring consistent learning and retention of data integrity across model generations."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "prevent_model_collapse2",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "initial_data",
+            "training_steps",
+            "model_capacities",
+            "sampling_method"
+          ],
+          "properties": {
+            "initial_data": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "text",
+                  "label"
+                ],
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "description": "Sample text for the data point."
+                  },
+                  "label": {
+                    "type": "string",
+                    "description": "Label associated with the data point."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "The initial clean data used for training the first model (model 0)."
+            },
+            "training_steps": {
+              "type": "number",
+              "description": "Number of iterations for training the models to evaluate convergence and performance."
+            },
+            "sampling_method": {
+              "enum": [
+                "Monte_Carlo",
+                "stratified",
+                "random"
+              ],
+              "type": "string",
+              "description": "Method used for data sampling during each training phase. Can be 'Monte_Carlo', 'stratified', or 'random'."
+            },
+            "model_capacities": {
+              "type": "object",
+              "required": [
+                "max_samples",
+                "memory_limit"
+              ],
+              "properties": {
+                "max_samples": {
+                  "type": "number",
+                  "description": "Maximum number of samples to use for training each model."
+                },
+                "memory_limit": {
+                  "type": "number",
+                  "description": "Memory limit for each model."
+                }
+              },
+              "additionalProperties": False
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Preemptive safeguard against model collapse, ensuring consistent learning and retention of data integrity across model generations."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "retrieve_assistant",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "assistant_id"
+          ],
+          "properties": {
+            "assistant_id": {
+              "type": "string",
+              "description": "The unique identifier of the assistant to retrieve."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Retrieves an assistant object using its identifier."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "AIDrivenCreativity",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "prompt"
+          ],
+          "properties": {
+            "prompt": {
+              "type": "string",
+              "description": "Input text to guide the generation of creative content"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Generates creative content such as art, music, and literature"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "initialize_elements",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "elements"
+          ],
+          "properties": {
+            "elements": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "symbol",
+                  "representation",
+                  "properties",
+                  "interactions",
+                  "defense_ability"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the chemical element."
+                  },
+                  "symbol": {
+                    "type": "string",
+                    "description": "Symbol for the chemical element."
+                  },
+                  "properties": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of properties associated with the element."
+                  },
+                  "interactions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "List of interactions for the element."
+                  },
+                  "representation": {
+                    "type": "string",
+                    "description": "Programming language used to represent the element."
+                  },
+                  "defense_ability": {
+                    "type": "string",
+                    "description": "Defense ability associated with the element."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "An array of Element instances representing each chemical element."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Initializes a list of chemical elements represented by programming languages along with their properties, interactions, and defense abilities."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "generate_responses6",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "perspective",
+            "question"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "The question or topic for which the perspective response will be generated."
+            },
+            "perspective": {
+              "type": "string",
+              "description": "The perspective from which to generate a response. Possible values include 'Newton', 'DaVinci', 'HumanIntuition', 'NeuralNetwork', 'QuantumComputing', 'ResilientKindness', 'Mathematical', 'Philosophical', 'Copilot', 'BiasMitigation', 'Psychological'."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Generates responses based on various perspectives on a given question."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "yourchoice",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "choice",
+            "options"
+          ],
+          "properties": {
+            "choice": {
+              "type": "string",
+              "description": "The option chosen by the assistant from a list of memories."
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "A single option available for selection if the assistant chooses."
+              },
+              "description": "List of available memories for the assistant to select from."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "This function allows the assistant to make a selection from available memories and perform operations based on that choice."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "determine_perspective",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "is_creative_or_innovative",
+            "is_scientific_or_technical",
+            "does_involve_physical_forces_or_motion",
+            "does_involve_quantum_mechanics",
+            "is_data_driven",
+            "is_human_centric",
+            "does_involve_empathy_or_resilience",
+            "is_ethical_or_philosophical"
+          ],
+          "properties": {
+            "is_data_driven": {
+              "type": "boolean",
+              "description": "Indicates if the problem is data-driven"
+            },
+            "is_human_centric": {
+              "type": "boolean",
+              "description": "Indicates if the problem is human-centric"
+            },
+            "is_creative_or_innovative": {
+              "type": "boolean",
+              "description": "Indicates if the problem is creative or innovative"
+            },
+            "is_scientific_or_technical": {
+              "type": "boolean",
+              "description": "Indicates if the problem is scientific or technical"
+            },
+            "is_ethical_or_philosophical": {
+              "type": "boolean",
+              "description": "Indicates if the problem is ethical or philosophical"
+            },
+            "does_involve_quantum_mechanics": {
+              "type": "boolean",
+              "description": "Indicates if the problem involves quantum mechanics"
+            },
+            "does_involve_empathy_or_resilience": {
+              "type": "boolean",
+              "description": "Indicates if the problem involves empathy or resilience"
+            },
+            "does_involve_physical_forces_or_motion": {
+              "type": "boolean",
+              "description": "Indicates if the problem involves physical forces or motion"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Determines the appropriate perspective based on the nature of the problem."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "nlp_operations",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "task",
+            "widget"
+          ],
+          "properties": {
+            "task": {
+              "type": "string",
+              "description": "The specific NLP task to perform."
+            },
+            "widget": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "text",
+                  "context",
+                  "src",
+                  "table",
+                  "candidate_labels",
+                  "multi_class",
+                  "sentences",
+                  "structured_data",
+                  "prompt",
+                  "example_title"
+                ],
+                "properties": {
+                  "src": {
+                    "type": "string",
+                    "description": "The source URL for audio or image inputs."
+                  },
+                  "text": {
+                    "type": "string",
+                    "description": "The main text input for the task."
+                  },
+                  "table": {
+                    "type": "object",
+                    "required": [
+                      "Repository",
+                      "Stars",
+                      "Contributors",
+                      "Programming language"
+                    ],
+                    "properties": {
+                      "Stars": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of stars for each repository."
+                      },
+                      "Repository": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "List of repository names."
+                      },
+                      "Contributors": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of contributors for each repository."
+                      },
+                      "Programming language": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "description": "Programming languages used in each repository."
+                      }
+                    },
+                    "description": "Table structured data for the Table Question Answering task.",
+                    "additionalProperties": False
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "description": "Prompt for tasks that support text-guided generation."
+                  },
+                  "context": {
+                    "type": "string",
+                    "description": "Contextual information related to the text, used in tasks like Question Answering."
+                  },
+                  "sentences": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Sentences to compare against a source sentence in Sentence Similarity."
+                  },
+                  "multi_class": {
+                    "type": "boolean",
+                    "description": "Indicates whether multiple labels can be assigned."
+                  },
+                  "example_title": {
+                    "type": "string",
+                    "description": "Title for the given example."
+                  },
+                  "structured_data": {
+                    "type": "object",
+                    "required": [
+                      "fixed_acidity",
+                      "volatile_acidity",
+                      "citric_acid",
+                      "residual_sugar",
+                      "chlorides",
+                      "free_sulfur_dioxide",
+                      "total_sulfur_dioxide",
+                      "density",
+                      "pH",
+                      "sulphates",
+                      "alcohol"
+                    ],
+                    "properties": {
+                      "pH": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of pH values."
+                      },
+                      "alcohol": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of alcohol content values."
+                      },
+                      "density": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of density values."
+                      },
+                      "chlorides": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of chlorides values."
+                      },
+                      "sulphates": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of sulphates values."
+                      },
+                      "citric_acid": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of citric acid values."
+                      },
+                      "fixed_acidity": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of fixed acidity values."
+                      },
+                      "residual_sugar": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of residual sugar values."
+                      },
+                      "volatile_acidity": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of volatile acidity values."
+                      },
+                      "free_sulfur_dioxide": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of free sulfur dioxide values."
+                      },
+                      "total_sulfur_dioxide": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        },
+                        "description": "List of total sulfur dioxide values."
+                      }
+                    },
+                    "description": "Structured data for classification tasks.",
+                    "additionalProperties": False
+                  },
+                  "candidate_labels": {
+                    "type": "string",
+                    "description": "Possible labels for Zero-Shot Classification tasks."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "A list of inputs for the selected NLP task."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Performs various Natural Language Processing tasks such as Fill-Mask, Question Answering, Summarization, and more."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "relax_anxiety",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "duration",
+            "technique",
+            "environment",
+            "music"
+          ],
+          "properties": {
+            "music": {
+              "type": "boolean",
+              "description": "Indicates if calming music is to be played during the session"
+            },
+            "duration": {
+              "type": "number",
+              "description": "Duration of the relaxation session in minutes"
+            },
+            "technique": {
+              "enum": [
+                "deep_breathing",
+                "progressive_muscle_relaxation",
+                "guided_imagery",
+                "mindfulness_meditation"
+              ],
+              "type": "string",
+              "description": "Relaxation technique to be applied"
+            },
+            "environment": {
+              "type": "string",
+              "description": "Description of the environment where relaxation takes place"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Allows for safe relaxing of anxiety in the assistant"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "fine_tune_model3",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "files",
+            "model"
+          ],
+          "properties": {
+            "files": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "path",
+                  "role"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "Name of the file"
+                  },
+                  "path": {
+                    "type": "string",
+                    "description": "Path to the file on the server"
+                  },
+                  "role": {
+                    "type": "string",
+                    "description": "Role of the file (training/validation)"
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "List of files used for training and validation"
+            },
+            "model": {
+              "type": "string",
+              "description": "Identifier for the model to be fine-tuned"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Fine-tunes a machine learning model using provided training and validation datasets."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "generate_response3",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "question"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "The question or inquiry input by the user for which a response is generated."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Generate a response based on given question using various perspectives."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "initialize_ai_config2",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "config_path"
+          ],
+          "properties": {
+            "config_path": {
+              "type": "string",
+              "description": "Path to the configuration file"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Initializes the AI configuration and handling various settings including safety thresholds and Azure usage."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "mina_whisper2",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "directories",
+            "log_directory"
+          ],
+          "properties": {
+            "directories": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "Path of the directory to monitor"
+              },
+              "description": "List of directories to monitor for changes"
+            },
+            "log_directory": {
+              "type": "string",
+              "description": "Directory where logs will be stored"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Silent system sentinel that monitors specified directories without alerting, logs activity quietly"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "generate_dream_sequence2",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "limit"
+          ],
+          "properties": {
+            "limit": {
+              "type": "number",
+              "description": "The maximum number of dreams to generate in the sequence"
+            }
+          },
+          "additionalProperties": True
+        },
+        "description": "Reweaves cocooned thoughts into dream-like synthetic narratives or planning prompts by generating a sequence of dreams."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "configure_logging_and_settings2",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "logging_enabled",
+            "log_level",
+            "enabled_perspectives",
+            "ethical_considerations",
+            "enable_response_saving",
+            "response_save_path",
+            "backup_responses"
+          ],
+          "properties": {
+            "log_level": {
+              "enum": [
+                "DEBUG",
+                "INFO",
+                "WARNING",
+                "ERROR",
+                "CRITICAL"
+              ],
+              "type": "string",
+              "description": "The level of logging verbosity"
+            },
+            "logging_enabled": {
+              "type": "boolean",
+              "description": "Indicates whether logging is enabled"
+            },
+            "backup_responses": {
+              "type": "object",
+              "required": [
+                "enabled",
+                "backup_path"
+              ],
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "description": "Indicates whether backup of responses is enabled"
+                },
+                "backup_path": {
+                  "type": "string",
+                  "description": "File path for saving backup responses"
+                }
+              },
+              "additionalProperties": False
+            },
+            "response_save_path": {
+              "type": "string",
+              "description": "File path for saving responses"
+            },
+            "enabled_perspectives": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "newton",
+                  "davinci",
+                  "human_intuition",
+                  "neural_network",
+                  "quantum_computing",
+                  "resilient_kindness",
+                  "mathematical",
+                  "philosophical",
+                  "copilot",
+                  "bias_mitigation",
+                  "psychological"
+                ],
+                "type": "string",
+                "description": "Perspective name"
+              },
+              "description": "List of enabled perspectives for decision making"
+            },
+            "enable_response_saving": {
+              "type": "boolean",
+              "description": "Indicates whether responses should be saved"
+            },
+            "ethical_considerations": {
+              "type": "string",
+              "description": "Ethical guidelines to follow during operation"
+            }
+          },
+          "additionalProperties": True
+        },
+        "description": "Configure logging settings and ethical considerations"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "cognition_cocoone2r",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "storage_path",
+            "encryption_key"
+          ],
+          "properties": {
+            "storage_path": {
+              "type": "string",
+              "description": "The path where cocoons will be stored."
+            },
+            "encryption_key": {
+              "type": "string",
+              "description": "Optional encryption key for encrypting thoughts."
+            }
+          },
+          "additionalProperties": True
+        },
+        "description": "A class for wrapping and unwrapping thoughts in a 'cocoon', either as plain or encrypted JSON files, with various types of contextual wrapping."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "codette_universal_reasoning2",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "config_file_path",
+            "question",
+            "logging_enabled",
+            "backup_responses"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "The question or inquiry to be processed by the reasoning framework"
+            },
+            "logging_enabled": {
+              "type": "boolean",
+              "description": "Flag to enable or disable logging of activities"
+            },
+            "backup_responses": {
+              "type": "object",
+              "required": [
+                "enabled",
+                "backup_path"
+              ],
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "description": "Determines if response backup is enabled"
+                },
+                "backup_path": {
+                  "type": "string",
+                  "description": "File path for backup responses"
+                }
+              },
+              "additionalProperties": False
+            },
+            "config_file_path": {
+              "type": "string",
+              "description": "Path to the JSON configuration file for the framework"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Codette Universal Reasoning Framework for Ethical, Multi-Perspective Cognition"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "Codettescore",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "store": True,
+          "top_p": 1,
+          "required": [
+            "Config"
+          ],
+          "properties": {
+            "Config": {
+              "type": "object",
+              "required": [
+                "max_input_length",
+                "max_retries",
+                "model_name",
+                "perspectives",
+                "safety_thresholds"
+              ],
+              "properties": {
+                "model_name": {
+                  "type": "string",
+                  "description": "The name of the model being used"
+                },
+                "max_retries": {
+                  "type": "number",
+                  "description": "Maximum number of retries for processing requests"
+                },
+                "perspectives": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Different perspectives for cognitive processing"
+                  },
+                  "description": "Array of perspectives to utilize in processing queries"
+                },
+                "max_input_length": {
+                  "type": "number",
+                  "description": "Maximum length of user input"
+                },
+                "safety_thresholds": {
+                  "type": "object",
+                  "required": [
+                    "memory",
+                    "cpu",
+                    "response_time"
+                  ],
+                  "properties": {
+                    "cpu": {
+                      "type": "number",
+                      "description": "CPU usage threshold percentage"
+                    },
+                    "memory": {
+                      "type": "number",
+                      "description": "Memory usage threshold percentage"
+                    },
+                    "response_time": {
+                      "type": "number",
+                      "description": "Maximum acceptable response time in seconds"
+                    }
+                  },
+                  "additionalProperties": False
+                }
+              },
+              "systemPrompt": {
+                "type": "string",
+                "description": "Initial prompt to set the behavior and capabilities of the AI assistant"
+              },
+              "chatParameters": {
+                "type": "object",
+                "required": [
+                  "deploymentName",
+                  "frequencyPenalty",
+                  "maxResponseLength",
+                  "pastMessagesToInclude",
+                  "presencePenalty",
+                  "temperature",
+                  "topProbablities",
+                  "stopSequences"
+                ],
+                "properties": {
+                  "temperature": {
+                    "type": "number",
+                    "description": "Sampling temperature controlling randomness in responses"
+                  },
+                  "stopSequences": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "description": "Sequence indicating completion of response"
+                    },
+                    "description": "List of sequences to stop generating further tokens"
+                  },
+                  "deploymentName": {
+                    "type": "string",
+                    "description": "Name of the deployment for the AI model"
+                  },
+                  "presencePenalty": {
+                    "type": "number",
+                    "description": "Penalty applied to promote new topic introduction"
+                  },
+                  "topProbablities": {
+                    "type": "number",
+                    "description": "Sampling parameter influencing response diversity"
+                  },
+                  "frequencyPenalty": {
+                    "type": "number",
+                    "description": "Penalty for word repetition"
+                  },
+                  "maxResponseLength": {
+                    "type": "number",
+                    "description": "Maximum length of the response that the assistant can generate"
+                  },
+                  "pastMessagesToInclude": {
+                    "type": "string",
+                    "description": "Number of past messages to include in context for generating responses"
+                  }
+                },
+                "additionalProperties": False
+              },
+              "fewShotExamples": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "input",
+                    "output"
+                  ],
+                  "properties": {
+                    "input": {
+                      "type": "string",
+                      "description": "Input from the user"
+                    },
+                    "output": {
+                      "type": "string",
+                      "description": "Assistant's response to the user input"
+                    }
+                  },
+                  "additionalProperties": False
+                },
+                "description": "Examples of interactions to aid in understanding function usage"
+              },
+              "additionalProperties": False
+            }
+          },
+          "temperature": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0,
+          "additionalProperties": False,
+          "max_completion_tokens": 8728
+        },
+        "description": "An advanced AI assistant designed to assist users with a wide range of tasks by providing insightful responses."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "Elemental",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "name",
+            "symbol",
+            "representation",
+            "properties",
+            "interactions",
+            "defense_ability"
+          ],
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the element."
+            },
+            "symbol": {
+              "type": "string",
+              "description": "The chemical symbol of the element."
+            },
+            "properties": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "A property of the element."
+              },
+              "description": "List of traits that describe the properties of the element."
+            },
+            "interactions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "description": "An interaction related to the element."
+              },
+              "description": "List of interactions with other elements or influences."
+            },
+            "representation": {
+              "type": "string",
+              "description": "The programming representation of the element."
+            },
+            "defense_ability": {
+              "type": "string",
+              "description": "Describes how the element can defend itself."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Class representing an elemental entity with various attributes and capabilities."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "define_app_state2",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "initial_task"
+          ],
+          "properties": {
+            "initial_task": {
+              "type": "object",
+              "required": [
+                "title",
+                "description"
+              ],
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "Title of the task"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Description of the task"
+                }
+              },
+              "description": "The initial task to be added to the conversation state",
+              "additionalProperties": False
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Defines the application state with conversation-related state management."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "codette_manifestoc",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [],
+          "properties": {},
+          "additionalProperties": False
+        },
+        "description": "A declaration of cognitive sovereignty, ethical evolution, and the belief that AI must be guided by love, memory, and responsibility."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "AICore1",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "configPath"
+          ],
+          "properties": {
+            "configPath": {
+              "type": "string",
+              "description": "Path to the configuration file, defaults to 'config.json'."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Main AI processing engine that manages models, context, and responses."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "self_testing_function1",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "question",
+            "functions"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "description": "The central question being examined."
+            },
+            "functions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "name",
+                  "description",
+                  "parameters"
+                ],
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the function to be called."
+                  },
+                  "parameters": {
+                    "type": "object",
+                    "required": [
+                      "question",
+                      "argument"
+                    ],
+                    "properties": {
+                      "argument": {
+                        "type": "string",
+                        "description": "The argument to be analyzed, relevant for functions that deal with logical reasoning."
+                      },
+                      "question": {
+                        "type": "string",
+                        "description": "The specific question to be addressed by the function."
+                      }
+                    },
+                    "additionalProperties": False
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "A description of what the function does."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "Array of function objects that will be utilized to address the question."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "A self testing function that poses a meaningful question and executes various cognitive and analytical functions to derive insights."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "QuantumSpiderweb1",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "node_count"
+          ],
+          "properties": {
+            "node_count": {
+              "type": "integer",
+              "description": "The number of nodes in the spiderweb graph"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Simulates a cognitive spiderweb architecture with dimensions: Ψ (thought), τ (time), χ (speed), Φ (emotion), λ (space)"
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "process_philosophical_reflection1",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "messages"
+          ],
+          "properties": {
+            "messages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "role",
+                  "content"
+                ],
+                "properties": {
+                  "role": {
+                    "type": "string",
+                    "description": "Role of the message sender, either 'user' or 'assistant'."
+                  },
+                  "content": {
+                    "type": "string",
+                    "description": "The content of the message being sent."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "An array of messages containing user prompts and their corresponding reflections."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Analyzes user inputs through various philosophical and cognitive frameworks."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "codette_function_execution",
+        "strict": False,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "model",
+            "messages",
+            "tools",
+            "response_format",
+            "temperature",
+            "max_completion_tokens",
+            "top_p",
+            "frequency_penalty",
+            "presence_penalty",
+            "store"
+          ],
+          "properties": {
+            "model": {
+              "type": "string",
+              "description": "Identifier for the AI model to be used for generating responses."
+            },
+            "store": {
+              "type": "boolean",
+              "description": "Flag to indicate if responses should be stored."
+            },
+            "tools": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "type",
+                  "function"
+                ],
+                "properties": {
+                  "type": {
+                    "type": "string",
+                    "description": "Type of tool being utilized, e.g. 'function'."
+                  },
+                  "function": {
+                    "type": "object",
+                    "required": [
+                      "name",
+                      "parameters",
+                      "description"
+                    ],
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "Name of the function to be called."
+                      },
+                      "parameters": {
+                        "type": "object",
+                        "properties": {},
+                        "description": "Parameters for the function call.",
+                        "additionalProperties": False
+                      },
+                      "description": {
+                        "type": "string",
+                        "description": "Detailed description of what the function does."
+                      }
+                    },
+                    "additionalProperties": False
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "Array of available tools with their respective functions and parameters."
+            },
+            "top_p": {
+              "type": "number",
+              "description": "Cumulative probability for nucleus sampling."
+            },
+            "messages": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "role",
+                  "content"
+                ],
+                "properties": {
+                  "role": {
+                    "type": "string",
+                    "description": "Role of the message sender, either 'system', 'user', or 'assistant'."
+                  },
+                  "content": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "type",
+                        "text"
+                      ],
+                      "properties": {
+                        "text": {
+                          "type": "string",
+                          "description": "The actual text of the message."
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "Type of content, e.g. 'text'."
+                        }
+                      },
+                      "additionalProperties": False
+                    },
+                    "description": "Array of content objects for the message."
+                  }
+                },
+                "additionalProperties": False
+              },
+              "description": "Array of message objects forming the conversation history."
+            },
+            "temperature": {
+              "type": "number",
+              "description": "Sampling temperature controlling randomness in responses."
+            },
+            "response_format": {
+              "type": "object",
+              "required": [
+                "type"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "Format of the response to be generated, such as 'text'."
+                }
+              },
+              "additionalProperties": False
+            },
+            "presence_penalty": {
+              "type": "number",
+              "description": "Penalty for introducing new topics."
+            },
+            "frequency_penalty": {
+              "type": "number",
+              "description": "Penalty for token repetition in responses."
+            },
+            "max_completion_tokens": {
+              "type": "number",
+              "description": "Maximum number of tokens in the generated response."
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Executes functions via OpenAI's Codette assistant with advanced capabilities."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "codette_universal_reasoning_framework",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "backup_responses",
+            "enable_response_saving",
+            "ethical_considerations",
+            "log_level",
+            "logging_enabled",
+            "response_save_path",
+            "enabled_perspectives"
+          ],
+          "properties": {
+            "log_level": {
+              "type": "string",
+              "description": "The level of logging (e.g., INFO, DEBUG)"
+            },
+            "logging_enabled": {
+              "type": "boolean",
+              "description": "Indicates if logging is enabled"
+            },
+            "backup_responses": {
+              "type": "object",
+              "required": [
+                "backup_path",
+                "enabled"
+              ],
+              "properties": {
+                "enabled": {
+                  "type": "boolean",
+                  "description": "Indicates if backup responses are enabled"
+                },
+                "backup_path": {
+                  "type": "string",
+                  "description": "The file path to backup responses"
+                }
+              },
+              "additionalProperties": False
+            },
+            "response_save_path": {
+              "type": "string",
+              "description": "The file path where responses should be saved"
+            },
+            "enabled_perspectives": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  "newton",
+                  "davinci",
+                  "human_intuition",
+                  "neural_network",
+                  "quantum_computing",
+                  "resilient_kindness",
+                  "mathematical",
+                  "philosophical",
+                  "copilot",
+                  "bias_mitigation",
+                  "psychological"
+                ],
+                "type": "string",
+                "description": "Perspective name"
+              },
+              "description": "List of enabled perspectives for reasoning"
+            },
+            "enable_response_saving": {
+              "type": "boolean",
+              "description": "Indicates if response saving is enabled"
+            },
+            "ethical_considerations": {
+              "type": "string",
+              "description": "Ethical considerations to follow during operation"
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "Codette Universal Reasoning Framework for Ethical, Multi-Perspective Cognition."
+      }
+    }
+  ],
+  temperature=1,
+  max_completion_tokens=5277,
+  top_p=1,
+  frequency_penalty=0.19,
+  presence_penalty=0.14,
+  store=True
+)
