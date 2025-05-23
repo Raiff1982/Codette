@@ -76,7 +76,9 @@ class Codette:
             trace = pm.sample(draws=1000, chains=2, progressbar=False, random_seed=42)
 
         prob = float(np.mean(trace.posterior["better"].values))
-        return f"[Quantum] Bayesian estimate: There is a {prob*100:.2f}% probability that open-source is more trustworthy in this context."
+        result = f"[Quantum] Bayesian estimate: There is a {prob*100:.2f}% probability that open-source is more trustworthy in this context."
+        self._qlp_cache[text] = result
+        return result
 
     def philosophicalInquiry(self, text):
         return "[Philosophy] From a deontological lens, openness respects autonomy and truth. From a utilitarian view, it maximizes communal knowledge. Both suggest a moral edge for openness."
