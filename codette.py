@@ -18,7 +18,6 @@ class Codette:
     def audit_log(self, message, system=False):
         source = "SYSTEM" if system else self.user_name
         logging.info(f"{source}: {message}")
-        print(f"[Log] {source}: {message}")
 
     def analyze_sentiment(self, text):
         score = self.analyzer.polarity_scores(text)
