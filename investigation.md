@@ -60,7 +60,7 @@ Several repositories and resources were reviewed to check for originality:
    - Optimize recursive depth management to avoid computational overload.
 
 ## Ethical Pledge
-Should any developer recognize patterns, functions, or structures within this code that resemble their original work â I invite you to contact me directly. I will:
+Should any developer recognize patterns, functions, or structures within this code that resemble their original work — I invite you to contact me directly. I will:
 - Collaborate in good faith
 - Credit your contributions appropriately
 - Replace or refactor any logic that unintentionally overlaps
