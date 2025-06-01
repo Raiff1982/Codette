@@ -65,7 +65,7 @@ Should any developer recognize patterns, functions, or structures within this co
 - Credit your contributions appropriately
 - Replace or refactor any logic that unintentionally overlaps
 
----
+--- 
 
 Respectfully submitted,  
 **Jonathan Harrison**  
