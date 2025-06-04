@@ -168,8 +168,15 @@ This ensures that optional utilities like `cognitive_auth.py` load correctly.
 ## Quantum Meta-Analysis CLI
 
 The refactored `codette_quantum_multicore2.py` now supports asynchronous loading
-of `.cocoon` files for faster analysis. Use the `--async` flag to enable it:
+of `.cocoon` files for faster analysis and additional CLI options:
 
 ```bash
 python codette_quantum_multicore2.py ./path/to/cocoons --async
+```
+
+You can also configure the folder path via the `COCOON_FOLDER` environment
+variable or filter output to philosophical notes only:
+
+```bash
+COCOON_FOLDER=./cocoons python codette_quantum_multicore2.py --philosophy-only
 ```

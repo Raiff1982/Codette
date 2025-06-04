@@ -9,14 +9,21 @@ maintenance and testing.
 from __future__ import annotations
 
 import argparse
+import asyncio
 import json
+import logging
 import os
 from pathlib import Path
 from typing import Iterable, List, Tuple
-import asyncio
 
 import matplotlib.pyplot as plt
 import numpy as np
+
+logging.basicConfig(
+    filename="meta_analysis.log",
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
 
 
 def simple_neural_activator(
@@ -46,9 +53,16 @@ def philosophical_perspective(qv: Iterable[float], cv: Iterable[float]) -> str:
 
 
 def load_cocoon(path: Path) -> dict:
-    """Synchronously load a single cocoon file."""
-    with path.open() as f:
-        return json.load(f)["data"]
+    """Synchronously load a single cocoon file with error handling."""
+    try:
+        with path.open() as f:
+            data = json.load(f)
+        if not isinstance(data, dict) or "data" not in data:
+            raise ValueError("Invalid cocoon schema")
+        return data["data"]
+    except (json.JSONDecodeError, OSError, ValueError) as exc:
+        logging.warning("Failed to load %s: %s", path, exc)
+        raise
 
 
 async def load_cocoon_async(path: Path) -> dict:
@@ -75,15 +89,16 @@ def analyse_cocoons(folder: Path) -> List[dict]:
             neural = simple_neural_activator(q, c)
             dream_q, dream_c = codette_dream_agent(q, c)
             phil = philosophical_perspective(q, c)
-            meta_mutations.append(
-                {
-                    "dreamQ": dream_q,
-                    "dreamC": dream_c,
-                    "neural": neural,
-                    "philosophy": phil,
-                }
-            )
-            print(f"{path.name} | {q} | {c} | {neural} | {dream_q}/{dream_c} | {phil}")
+            entry = {
+                "dreamQ": dream_q,
+                "dreamC": dream_c,
+                "neural": neural,
+                "philosophy": phil,
+            }
+            meta_mutations.append(entry)
+            msg = f"{path.name} | {q} | {c} | {neural} | {dream_q}/{dream_c} | {phil}"
+            print(msg)
+            logging.info(msg)
         except Exception as exc:  # pylint: disable=broad-except
             print(f"Warning: {path.name} failed ({exc})")
 
@@ -111,26 +126,27 @@ async def analyse_cocoons_async(folder: Path) -> List[dict]:
             neural = simple_neural_activator(q, c)
             dream_q, dream_c = codette_dream_agent(q, c)
             phil = philosophical_perspective(q, c)
-            meta_mutations.append(
-                {
-                    "dreamQ": dream_q,
-                    "dreamC": dream_c,
-                    "neural": neural,
-                    "philosophy": phil,
-                }
-            )
-            print(
-                f"async | {q} | {c} | {neural} | {dream_q}/{dream_c} | {phil}"
-            )
+            entry = {
+                "dreamQ": dream_q,
+                "dreamC": dream_c,
+                "neural": neural,
+                "philosophy": phil,
+            }
+            meta_mutations.append(entry)
+            msg = f"async | {q} | {c} | {neural} | {dream_q}/{dream_c} | {phil}"
+            print(msg)
+            logging.info(msg)
         except Exception as exc:  # pylint: disable=broad-except
-            print(f"Warning: async load failed ({exc})")
+            logging.warning("async load failed: %s", exc)
 
     return meta_mutations
 
 
 def plot_meta_dream(meta_mutations: List[dict]) -> None:
     if not meta_mutations:
-        print("No valid cocoons found for meta-analysis.")
+        msg = "No valid cocoons found for meta-analysis."
+        print(msg)
+        logging.info(msg)
         return
 
     dq0 = [m["dreamQ"][0] for m in meta_mutations]
@@ -155,12 +171,25 @@ def main() -> None:
     parser.add_argument(
         "--async", dest="use_async", action="store_true", help="Use async loading"
     )
+    parser.add_argument(
+        "--philosophy-only",
+        dest="philo_only",
+        action="store_true",
+        help="Only output philosophical notes",
+    )
     args = parser.parse_args()
 
+    folder = Path(os.getenv("COCOON_FOLDER", args.folder))
+
     if args.use_async:
-        meta_mutations = asyncio.run(analyse_cocoons_async(Path(args.folder)))
+        meta_mutations = asyncio.run(analyse_cocoons_async(folder))
     else:
-        meta_mutations = analyse_cocoons(Path(args.folder))
+        meta_mutations = analyse_cocoons(folder)
+
+    if args.philo_only:
+        for m in meta_mutations:
+            print(m["philosophy"])
+        return
     plot_meta_dream(meta_mutations)
 
 
