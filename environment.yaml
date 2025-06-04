@@ -9,6 +9,8 @@ dependencies:
   - aiohttp
   - transformers
   - pyyaml
-  - json
-  - pip:
-    - some-pip-package
+  - vaderSentiment
+  - nltk
+  - pymc
+  - sympy
+  - arviz
