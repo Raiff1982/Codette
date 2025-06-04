@@ -2,3 +2,13 @@ numpy
 requests
 werkzeug
 pycryptodome
+aiohttp
+transformers
+pyyaml
+vaderSentiment
+nltk
+pymc
+sympy
+arviz
+scikit-learn
+psutil

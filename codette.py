@@ -13,6 +13,7 @@ class Codette:
         self.user_name = user_name
         self.memory = []
         self.analyzer = SentimentIntensityAnalyzer()
+        self._qlp_cache = {}
         self.audit_log("Codette initialized", system=True)
 
     def audit_log(self, message, system=False):
