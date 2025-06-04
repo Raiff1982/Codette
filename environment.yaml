@@ -9,7 +9,7 @@ dependencies:
   - aiohttp
   - transformers
   - pyyaml
-  - vaderSentiment
+  - vaderSentiment=3.3.2
   - nltk
   - pymc
   - sympy
