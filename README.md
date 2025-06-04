@@ -153,3 +153,23 @@ We welcome contributions from the community! Here's how you can get started:
 3. Follow the steps in the `CONTRIBUTING.md` to submit a pull request.
 
 If you have any questions, feel free to open an issue or start a discussion!
+
+## Running Tests
+
+After installing the requirements with `pip install -r requirements.txt`, you
+can run the lightweight test suite:
+
+```bash
+PYTHONPATH=. pytest -q
+```
+
+This ensures that optional utilities like `cognitive_auth.py` load correctly.
+
+## Quantum Meta-Analysis CLI
+
+The refactored `codette_quantum_multicore2.py` now supports asynchronous loading
+of `.cocoon` files for faster analysis. Use the `--async` flag to enable it:
+
+```bash
+python codette_quantum_multicore2.py ./path/to/cocoons --async
+```
