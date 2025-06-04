@@ -180,3 +180,6 @@ variable or filter output to philosophical notes only:
 ```bash
 COCOON_FOLDER=./cocoons python codette_quantum_multicore2.py --philosophy-only
 ```
+
+Logging verbosity can be adjusted with `--log-level` (e.g. DEBUG) and the
+script exits with code `1` if no valid cocoons are analysed.

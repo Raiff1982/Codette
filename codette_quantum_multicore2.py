@@ -19,11 +19,17 @@ from typing import Iterable, List, Tuple
 import matplotlib.pyplot as plt
 import numpy as np
 
-logging.basicConfig(
-    filename="meta_analysis.log",
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-)
+LOG = logging.getLogger(__name__)
+
+
+def _configure_logging(level: str) -> None:
+    """Configure global logging."""
+    numeric = getattr(logging, level.upper(), logging.INFO)
+    logging.basicConfig(
+        filename="meta_analysis.log",
+        level=numeric,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+    )
 
 
 def simple_neural_activator(
@@ -52,20 +58,21 @@ def philosophical_perspective(qv: Iterable[float], cv: Iterable[float]) -> str:
     return "Philosophical Note: Echoes in the void."
 
 
-def load_cocoon(path: Path) -> dict:
+def load_cocoon(path: Path) -> dict | None:
     """Synchronously load a single cocoon file with error handling."""
     try:
         with path.open() as f:
             data = json.load(f)
         if not isinstance(data, dict) or "data" not in data:
             raise ValueError("Invalid cocoon schema")
+        LOG.debug("Loaded cocoon %s", path)
         return data["data"]
     except (json.JSONDecodeError, OSError, ValueError) as exc:
-        logging.warning("Failed to load %s: %s", path, exc)
-        raise
+        LOG.warning("Failed to load %s: %s", path, exc)
+        return None
 
 
-async def load_cocoon_async(path: Path) -> dict:
+async def load_cocoon_async(path: Path) -> dict | None:
     """Asynchronously load a cocoon using a thread executor."""
     return await asyncio.to_thread(load_cocoon, path)
 
@@ -84,6 +91,8 @@ def analyse_cocoons(folder: Path) -> List[dict]:
     for path in folder.glob("*.cocoon"):
         try:
             data = load_cocoon(path)
+            if data is None:
+                continue
             q = data.get("quantum_state", [0, 0])
             c = data.get("chaos_state", [0, 0, 0])
             neural = simple_neural_activator(q, c)
@@ -121,6 +130,8 @@ async def analyse_cocoons_async(folder: Path) -> List[dict]:
     for coro in asyncio.as_completed(tasks):
         try:
             data = await coro
+            if data is None:
+                continue
             q = data.get("quantum_state", [0, 0])
             c = data.get("chaos_state", [0, 0, 0])
             neural = simple_neural_activator(q, c)
@@ -142,12 +153,13 @@ async def analyse_cocoons_async(folder: Path) -> List[dict]:
     return meta_mutations
 
 
-def plot_meta_dream(meta_mutations: List[dict]) -> None:
+def plot_meta_dream(meta_mutations: List[dict]) -> bool:
+    """Plot dream scatter. Return True if plotted."""
     if not meta_mutations:
         msg = "No valid cocoons found for meta-analysis."
         print(msg)
-        logging.info(msg)
-        return
+        LOG.info(msg)
+        return False
 
     dq0 = [m["dreamQ"][0] for m in meta_mutations]
     dc0 = [m["dreamC"][0] for m in meta_mutations]
@@ -161,6 +173,7 @@ def plot_meta_dream(meta_mutations: List[dict]) -> None:
     plt.colorbar(sc, label="Neural Activation Class")
     plt.grid(True)
     plt.show()
+    return True
 
 
 def main() -> None:
@@ -177,8 +190,21 @@ def main() -> None:
         action="store_true",
         help="Only output philosophical notes",
     )
+    parser.add_argument(
+        "--log-level",
+        default="INFO",
+        help="Logging level (DEBUG, INFO, WARNING, ...)",
+    )
     args = parser.parse_args()
 
+    _configure_logging(args.log_level)
+
+    if "COCOON_FOLDER" in os.environ and args.folder != ".":
+        LOG.info(
+            "Using folder %s (COCOON_FOLDER overrides positional %s)",
+            os.environ["COCOON_FOLDER"],
+            args.folder,
+        )
     folder = Path(os.getenv("COCOON_FOLDER", args.folder))
 
     if args.use_async:
@@ -189,8 +215,11 @@ def main() -> None:
     if args.philo_only:
         for m in meta_mutations:
             print(m["philosophy"])
+        if not meta_mutations:
+            raise SystemExit(1)
         return
-    plot_meta_dream(meta_mutations)
+    if not plot_meta_dream(meta_mutations):
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":
