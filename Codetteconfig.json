@@ -1,0 +1,12 @@
+{
+  "logging_enabled": true,
+  "log_level": "INFO",
+  "enabled_perspectives": ["echo"],
+  "ethical_considerations": "Act transparently and respect user privacy.",
+  "enable_response_saving": false,
+  "response_save_path": "responses.txt",
+  "backup_responses": {
+    "enabled": false,
+    "backup_path": "backup_responses.txt"
+  }
+}
