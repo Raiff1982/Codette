@@ -42,7 +42,7 @@ def quantum_harmonic_dynamics(t, y):
                 accelerations[j] -= force / m2
 
     # Quantum Influence Calculations
-    quantum_modifier = np.dot(quantum_states, np.sin(2 * np.pi * base_freq * t / 1000)) * intent_coefficient
+    quantum_modifier = np.sum(quantum_states * np.sin(2 * np.pi * base_freq * t / 1000)) * intent_coefficient
     tunneling_shift = tunneling_factor * np.exp(-np.linalg.norm(positions) / hbar) if np.random.rand() < tunneling_factor else 0
     entangled_correction = entanglement_strength * np.exp(-np.linalg.norm(positions) / hbar)
     decoherence_adjustment = decoherence_factor * (1 - np.exp(-np.linalg.norm(positions) / hbar))
