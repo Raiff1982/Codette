@@ -153,3 +153,33 @@ We welcome contributions from the community! Here's how you can get started:
 3. Follow the steps in the `CONTRIBUTING.md` to submit a pull request.
 
 If you have any questions, feel free to open an issue or start a discussion!
+
+## Running Tests
+
+After installing the requirements with `pip install -r requirements.txt`, you
+can run the lightweight test suite:
+
+```bash
+PYTHONPATH=. pytest -q
+```
+
+This ensures that optional utilities like `cognitive_auth.py` load correctly.
+
+## Quantum Meta-Analysis CLI
+
+The refactored `codette_quantum_multicore2.py` now supports asynchronous loading
+of `.cocoon` files for faster analysis and additional CLI options:
+
+```bash
+python codette_quantum_multicore2.py ./path/to/cocoons --async
+```
+
+You can also configure the folder path via the `COCOON_FOLDER` environment
+variable or filter output to philosophical notes only:
+
+```bash
+COCOON_FOLDER=./cocoons python codette_quantum_multicore2.py --philosophy-only
+```
+
+Logging verbosity can be adjusted with `--log-level` (e.g. DEBUG) and the
+script exits with code `1` if no valid cocoons are analysed.
