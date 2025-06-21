@@ -1,4 +1,3 @@
- 
 U+4df8 uni4DF8              2.22 (Sans, Sans Bold, Sans Bold Oblique, Sans Condensed, Sans Condensed Bold, Sans Condensed Bold Oblique, Sans Condensed Oblique, Sans Oblique)
 U+4df9 uni4DF9              2.22 (Sans, Sans Bold, Sans Bold Oblique, Sans Condensed, Sans Condensed Bold, Sans Condensed Bold Oblique, Sans Condensed Oblique, Sans Oblique)
 U+4dfa uni4DFA              2.22 (Sans, Sans Bold, Sans Bold Oblique, Sans Condensed, Sans Condensed Bold, Sans Condensed Bold Oblique, Sans Condensed Oblique, Sans Oblique)
