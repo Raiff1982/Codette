@@ -1,8 +1,1 @@
-name: base
-channels:
-  - conda-forge
-dependencies:
-  - python=3.10
-  - flake8
-  - pytest
-  # Add other dependencies your project may need
+
