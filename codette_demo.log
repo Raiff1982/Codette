@@ -1,0 +1,130 @@
+2025-07-29 18:22:05,564 - INFO - CODETTE AI DEMO MODE ACTIVATED
+2025-07-29 18:22:05,565 - INFO - ==================================================
+2025-07-29 18:22:05,565 - INFO - [18:22:05.565] SYSTEM: Codette initialized
+2025-07-29 18:22:05,565 - INFO - [18:22:05.565] SYSTEM: Session started at 2025-07-29 18:22:05.564213
+2025-07-29 18:22:15,267 - INFO - [18:22:15.267] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-29 18:22:15,267 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-29 18:22:15,317 - INFO - [18:22:15.317] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-29 18:22:15,317 - INFO - BRAIN ----------------------------------------
+2025-07-29 18:22:15,322 - INFO - ==================================================
+2025-07-29 18:22:24,915 - INFO - [18:22:24.915] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-29 18:22:24,915 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-29 18:22:24,991 - INFO - [18:22:24.991] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-29 18:22:24,991 - INFO - BRAIN ----------------------------------------
+2025-07-29 18:22:24,996 - INFO - ==================================================
+2025-07-29 18:22:50,439 - INFO - [18:22:50.439] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-29 18:22:50,439 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-29 18:22:50,488 - INFO - [18:22:50.488] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-29 18:22:50,488 - INFO - BRAIN ----------------------------------------
+2025-07-29 18:22:50,496 - INFO - ==================================================
+2025-07-31 12:50:29,794 - INFO - CODETTE AI DEMO MODE ACTIVATED
+2025-07-31 12:50:29,796 - INFO - ==================================================
+2025-07-31 12:50:29,796 - INFO - [12:50:29.796] SYSTEM: Codette initialized
+2025-07-31 12:50:29,796 - INFO - [12:50:29.796] SYSTEM: Session started at 2025-07-31 12:50:29.794608
+2025-07-31 12:50:35,443 - INFO - [12:50:35.443] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:35,443 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:35,484 - INFO - [12:50:35.483] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:35,484 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:35,493 - INFO - ==================================================
+2025-07-31 12:50:41,539 - INFO - [12:50:41.539] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:41,539 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:41,578 - INFO - [12:50:41.578] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:41,578 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:41,581 - INFO - ==================================================
+2025-07-31 12:50:42,430 - INFO - [12:50:42.430] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:42,430 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:42,466 - INFO - [12:50:42.466] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:42,466 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:42,472 - INFO - ==================================================
+2025-07-31 12:50:43,062 - INFO - [12:50:43.062] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:43,062 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:43,128 - INFO - [12:50:43.128] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:43,128 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:43,133 - INFO - ==================================================
+2025-07-31 12:50:44,854 - INFO - [12:50:44.854] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:44,854 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:44,888 - INFO - [12:50:44.888] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:44,888 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:44,892 - INFO - ==================================================
+2025-07-31 12:50:46,107 - INFO - [12:50:46.107] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:46,107 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:46,142 - INFO - [12:50:46.142] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:46,142 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:46,144 - INFO - ==================================================
+2025-07-31 12:50:47,066 - INFO - [12:50:47.066] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:47,066 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:47,098 - INFO - [12:50:47.098] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:47,098 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:47,102 - INFO - ==================================================
+2025-07-31 12:50:47,758 - INFO - [12:50:47.758] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:47,758 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:47,795 - INFO - [12:50:47.795] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:47,795 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:47,800 - INFO - ==================================================
+2025-07-31 12:50:48,691 - INFO - [12:50:48.691] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:48,692 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:48,745 - INFO - [12:50:48.745] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:48,745 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:48,750 - INFO - ==================================================
+2025-07-31 12:50:49,574 - INFO - [12:50:49.574] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-07-31 12:50:49,574 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-07-31 12:50:49,607 - INFO - [12:50:49.607] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-07-31 12:50:49,607 - INFO - BRAIN ----------------------------------------
+2025-07-31 12:50:49,611 - INFO - ==================================================
+2025-08-01 20:47:22,706 - INFO - CODETTE AI DEMO MODE ACTIVATED
+2025-08-01 20:47:22,710 - INFO - ==================================================
+2025-08-01 20:47:22,710 - INFO - [20:47:22.710] SYSTEM: Codette initialized
+2025-08-01 20:47:22,710 - INFO - [20:47:22.710] SYSTEM: Session started at 2025-08-01 20:47:22.706334
+2025-08-01 20:47:39,110 - INFO - [20:47:39.110] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 20:47:39,110 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 20:47:39,129 - INFO - [20:47:39.129] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 20:47:39,129 - INFO - BRAIN ----------------------------------------
+2025-08-01 20:47:39,130 - INFO - ==================================================
+2025-08-01 20:48:00,820 - INFO - [20:48:00.820] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 20:48:00,820 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 20:48:00,848 - INFO - [20:48:00.848] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 20:48:00,848 - INFO - BRAIN ----------------------------------------
+2025-08-01 20:48:00,850 - INFO - ==================================================
+2025-08-01 20:49:18,731 - INFO - [20:49:18.731] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 20:49:18,731 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 20:49:18,750 - INFO - [20:49:18.750] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 20:49:18,750 - INFO - BRAIN ----------------------------------------
+2025-08-01 20:49:18,750 - INFO - ==================================================
+2025-08-01 20:50:07,400 - INFO - [20:50:07.400] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 20:50:07,400 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 20:50:07,420 - INFO - [20:50:07.420] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 20:50:07,420 - INFO - BRAIN ----------------------------------------
+2025-08-01 20:50:07,424 - INFO - ==================================================
+2025-08-01 20:50:48,780 - INFO - [20:50:48.780] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 20:50:48,780 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 20:50:48,811 - INFO - [20:50:48.811] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 20:50:48,811 - INFO - BRAIN ----------------------------------------
+2025-08-01 20:50:48,811 - INFO - ==================================================
+2025-08-01 21:04:49,290 - INFO - CODETTE AI DEMO MODE ACTIVATED
+2025-08-01 21:04:49,290 - INFO - ==================================================
+2025-08-01 21:04:49,290 - INFO - [21:04:49.290] SYSTEM: Codette initialized
+2025-08-01 21:04:49,290 - INFO - [21:04:49.290] SYSTEM: Session started at 2025-08-01 21:04:49.290483
+2025-08-01 21:05:25,382 - INFO - CODETTE AI DEMO MODE ACTIVATED
+2025-08-01 21:05:25,382 - INFO - ==================================================
+2025-08-01 21:05:25,382 - INFO - [21:05:25.382] SYSTEM: Codette initialized
+2025-08-01 21:05:25,382 - INFO - [21:05:25.382] SYSTEM: Session started at 2025-08-01 21:05:25.382784
+2025-08-01 21:05:30,630 - INFO - [21:05:30.630] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 21:05:30,630 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 21:05:30,644 - INFO - [21:05:30.644] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 21:05:30,644 - INFO - BRAIN ----------------------------------------
+2025-08-01 21:05:30,644 - INFO - ==================================================
+2025-08-01 21:05:35,664 - INFO - [21:05:35.664] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 21:05:35,664 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 21:05:35,687 - INFO - [21:05:35.687] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 21:05:35,687 - INFO - BRAIN ----------------------------------------
+2025-08-01 21:05:35,687 - INFO - ==================================================
+2025-08-01 21:05:37,000 - INFO - [21:05:37.000] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 21:05:37,000 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 21:05:37,021 - INFO - [21:05:37.021] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 21:05:37,021 - INFO - BRAIN ----------------------------------------
+2025-08-01 21:05:37,021 - INFO - ==================================================
+2025-08-01 21:05:38,030 - INFO - [21:05:38.030] Judge: Sentiment analysis: {'compound': 0.0, 'pos': 0.0, 'neg': 0.0, 'neu': 1.0}
+2025-08-01 21:05:38,030 - INFO - SENTIMENT: Neutral NEUTRAL (Score: 0.000)
+2025-08-01 21:05:38,050 - INFO - [21:05:38.050] Judge: Perspectives used: ['neuralNetworkPerspective', 'newtonianLogic', 'daVinciSynthesis', 'resilientKindness', 'quantumLogicPerspective', 'philosophicalInquiry', 'copilotAgent', 'mathematicalRigor', 'symbolicReasoning']
+2025-08-01 21:05:38,050 - INFO - BRAIN ----------------------------------------
+2025-08-01 21:05:38,050 - INFO - ==================================================
