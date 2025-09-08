@@ -1,3 +1,6 @@
+import os
+os.environ['PYTENSOR_FLAGS'] = 'mode=FAST_RUN,device=cpu,floatX=float32,optimizer=fast_compile'
+
 from codette import Codette
 
 def main():
