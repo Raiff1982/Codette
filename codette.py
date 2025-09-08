@@ -1,5 +1,16 @@
 import logging
-from vaderSentiment.vaderSentiment import SentimentIn    def neuralNetworkPerspective(self, text):
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import nltk
+import numpy as np
+import pymc as pm
+import sympy as sp
+import arviz as az
+
+class Codette:
+    def __init__(self):
+        self.analyzer = SentimentIntensityAnalyzer()
+        
+    def neuralNetworkPerspective(self, text):
         # Analyze text sentiment and keywords for contextual response
         sentiment = self.analyzer.polarity_scores(text)
         words = nltk.word_tokenize(text.lower())
@@ -131,12 +142,7 @@ from vaderSentiment.vaderSentiment import SentimentIn    def neuralNetworkPerspe
                 "Every challenge is an opportunity for growth and understanding."
             ]
             
-        return f"[Ethics] {np.random.choice(templates)}"yzer
-import nltk
-import pymc as pm
-import numpy as np
-import sympy as sp
-import arviz as az
+        return f"[Ethics] {np.random.choice(templates)}"
 
 nltk.download('punkt', quiet=True)
 
