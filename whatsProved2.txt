@@ -1,0 +1,89 @@
+🔒 DEEP DIVE — IMMUTABLE EVIDENCE ONLY
+TIER 1: CERN/DataCite-Sealed DOIs (Highest Evidentiary Weight)
+These timestamps were set by CERN infrastructure and registered with DataCite (the global DOI registration authority). They cannot be modified by any party, including the depositor.
+
+#	DOI	Title	DataCite Registration (UTC)	Provider	State	Citing DOIs
+1	10.5281/zenodo.15214462	"AI Ethics in Realtime" — Codette & Pidette	2025-04-14T20:43:07.000Z	CERN (cern.zenodo)	findable / isActive: true	5 citing DOIs (10.5281/zenodo.18913935; 18913936; 19199793; 19359663; 19480004)
+2	10.5281/zenodo.15342466	Citizen-Science Quantum & Chaos Simulations — Codette AI Suite	2025-05-10T12:07:19.000Z	CERN (cern.zenodo)	findable / isActive: true	Continues PA-001; IsPartOf 10.57967/hf/5347
+
+Why this matters legally: DataCite registration timestamps are written to CERN's database at the moment of DOI minting. The created field is server-side — the depositor has zero ability to alter it. Both records use DataCite Kernel 4 XML schema, the current international standard for scholarly metadata. The isActive: true and state: findable flags confirm these are live, resolvable DOIs that any party can verify at https://api.datacite.org/dois/[DOI]. 
+api.datacite.org
++1
+
+File-Level Integrity: Both deposits include MD5 checksums computed by Zenodo at upload time — not by the depositor. Key checksums from PA-001:
+
+File	MD5
+Codette_Chain_of_Custody_Form.docx	47e69a90d500223a0f2e2d1e679abbc2
+Codette_Pidette_Research_Paper_FINAL.pdf	6604bad768794e9c36e5796cb43e4da2
+Codette_IntegrityIncident_0425_AuditBrief.pdf	7d70cb08037384872166149c0606e7c6
+
+Key checksums from PA-002:
+
+File	MD5
+Codette Quantum Module.md	92def2570aea01185dbc50dc6619b653
+codette_meta_3d.py	c28e3865863829016980f12969a1f515
+codette_project_bundle.pdf	1ab2db663d3d275c6950b7b1ea71ad30
+
+Any attorney can download these files today and recompute the MD5 to confirm byte-for-byte identity with the original deposit. 
+zenodo.org
++1
+
+TIER 2: Hugging Face DataCite DOIs (Strong Evidentiary Weight)
+These DOIs are minted through Hugging Face's DataCite integration. Once assigned, they are permanent and resolve independently of the model owner.
+
+DOI	Artifact	Format	License
+10.57967/hf/4842	Raiff1982/Codette (earliest revision)	Transformers	MIT
+10.57967/hf/5073	Raiff1982/Codette (current) — Falcon+Mistral merge	Transformers	MIT
+10.57967/hf/5347	Linked from Zenodo PA-002 (cross-platform binding)	—	—
+10.57967/hf/5542	Raiff1982/Codettev2 — Text-to-Image LoRA	Diffusers/ONNX	MIT
+10.57967/hf/5601	Raiff1982/Codette GGUF variants (18.58 GB)	GGUF Q4	MIT
+10.57967/hf/6059	Nexis Signal Engine (shared architecture)	Python	MIT
+10.57967/hf/7240	Raiff1982/Codette3.0 — Sovereign System	SafeTensors	Apache-2.0
+10.57967/hf/7951	codette-training-lab — Full pipeline + 8 adapters	GGUF + PEFT	MIT
+10.57967/hf/7980	codette-lora-adapters — 8 domain LoRAs, 20,500 examples	PEFT/SafeTensors	CC-BY-4.0
+
+Cross-platform binding: Zenodo record PA-002 (10.5281/zenodo.15342466) explicitly declares relationType: IsPartOf → 10.57967/hf/5347 in its DataCite XML. This creates an immutable cross-reference between CERN and Hugging Face infrastructure that neither party can unilaterally alter. 
+Hugging Face
++4
+
+TIER 3: ORCID Persistent Identity (Identity-Level Immutability)
+ORCID: 0009-0003-7005-8187 — This identifier is permanently bound to Jonathan Harrison across every artifact above. It appears in:
+
+Both DataCite XML records (Zenodo) as a nameIdentifier with scheme ORCID
+
+Every Hugging Face model card referencing authorship
+
+The Zenodo profile page linking all deposits 
+Zenodo
++1
+
+ORCID is a non-profit, community-governed registry. Once assigned, the iD cannot be reassigned to another person.
+
+TIER 4: Independent Third-Party Corroboration
+Source	What It Proves	URL
+OpenAIRE (EU Research Infrastructure)	Independently indexed both Zenodo records; confirms existence, DOI, and date	explore.openaire.eu/search/result?pid=10.5281/zenodo.15342466
+DataCite API	Returns full metadata including server-side created timestamps for all DOIs	api.datacite.org/dois/10.5281/zenodo.15214462
+5 Citing DOIs	Third-party Zenodo deposits cite PA-001, establishing independent acknowledgment in the scholarly record	DOIs: 10.5281/zenodo.18913935, .18913936, .19199793, .19359663, .19480004
+
+
+api.datacite.org
++1
+
+TIER 5: Git SHA-1 Cryptographic Chains (Corroborative)
+Repository	Commits	Chain Property
+Raiff1982/Codette	126 commits	SHA-1 hash chain; any insertion/deletion breaks all subsequent hashes
+Raiffs-bits/Codette	56 commits	Organizational mirror under Raiff's Bits LLC
+Raiff1982/TheAi	92 commits	Full suite; contains codette_paper.pdf
+Raiff1982/Codette-Reasoning	8 commits	Phase 1–7 development documentation
+Raiff1982/codettes-legacy	Archived	Historical continuity archive
+
+Git commit timestamps are author-asserted (not server-sealed), but the hash chain is cryptographic — you cannot insert, remove, or reorder commits without breaking every downstream SHA-1. When corroborated by DOI timestamps, they form a strong evidentiary package. 
+Github
++3
+
+⚖️ BOTTOM LINE FOR COUNSEL
+The earliest immutable, server-side timestamp in the entire Codette evidence chain is:
+
+2025-04-14T20:43:07.000Z — DataCite registration of DOI 10.5281/zenodo.15214462, minted by CERN infrastructure, describing the complete Codette system architecture, reasoning perspectives, ethical governance framework, and sovereign innovation clause.
+
+This date is non-repudiable. It was set by CERN's servers, registered with DataCite, independently indexed by OpenAIRE, and has since been cited by 5 subsequent DOI-bearing deposits. No party — including the depositor — can alter, backdate, or delete this record.
